@@ -1,7 +1,12 @@
+import os
 from PIL import Image
 
 # Load the original image
 original_image = Image.open("punks.png")
+
+# Make output directory, 'grid_punks'
+if not os.path.exists("grid_punks"):
+    os.mkdir("grid_punks")
 
 # Set the size of each small image
 tile_size = 24
