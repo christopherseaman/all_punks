@@ -1,6 +1,8 @@
 import os
 from PIL import Image
 
+# Split the validation PNG of all 10,000 CryptoPunks into 24x24 avatars
+
 # Load the original image
 original_image = Image.open("punks.png")
 
@@ -34,3 +36,5 @@ for row in range(num_rows):
         tile.save(f"grid_punks/tile_{row}_{col}.png")
 
 print("Images successfully created!")
+
+# zip -r grid_punks.zip grid_punks
